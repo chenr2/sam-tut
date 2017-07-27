@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  HelloLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: HelloLambda 
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri: source 
+      MemorySize: 128 
+      Timeout: 30
+      Policies:
+        - AWSLambdaBasicExecutionRole
