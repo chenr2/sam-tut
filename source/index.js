@@ -7,5 +7,6 @@ exports.handler = (event, context, callback) => {
       input: event,
     }),
   };
+  console.log("is this able to write to cloudwatch?");
   callback(null, response);
 };

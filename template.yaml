@@ -12,3 +12,8 @@ Resources:
       Timeout: 30
       Policies:
         - AWSLambdaBasicExecutionRole
+      Events:
+        Cron:
+          Type: Schedule 
+          Properties:
+            Schedule: rate(5 minutes)
