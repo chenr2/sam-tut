@@ -13,7 +13,8 @@ Resources:
       Policies:
         - AWSLambdaBasicExecutionRole
       Events:
-        Cron:
-          Type: Schedule 
+        WebTrigger:
+          Type: Api
           Properties:
-            Schedule: rate(5 minutes)
+            Path: /ohai
+            Method: get
